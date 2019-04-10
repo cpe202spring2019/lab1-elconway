@@ -26,7 +26,7 @@ class TestLab1(unittest.TestCase):
         """Checks to make sure that bin_search is functioning correctly"""
         tlist = None
         with self.assertRaises(ValueError):
-            reverse_rec(tlist)
+            bin_search(0, 0, 0, tlist)
         self.assertEqual(bin_search(6, 0, 0, []), None)
         list_val =[0, 1, 2, 3, 4, 7, 8, 9, 10]
         low = 0

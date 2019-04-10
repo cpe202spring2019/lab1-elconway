@@ -10,23 +10,23 @@ class TestLab1(unittest.TestCase):
     # Add more tests!
 
     def test_equality(self):
-        loc1 = location.Location("SLO", 35.3, -120.7)
-        loc2 = location.Location("SLO", 35.3, -120.7)
+        loc1 = Location("SLO", 35.3, -120.7)
+        loc2 = Location("SLO", 35.3, -120.7)
         self.assertEqual(loc1, loc2)
 
     def test_lat_diff(self):
-        loc1 = location.Location("SLO", 35.3, -120.7)
-        loc3 = location.Location("SLO", 35.4, -120.7)
+        loc1 = Location("SLO", 35.3, -120.7)
+        loc3 = Location("SLO", 35.4, -120.7)
         self.assertNotEqual(loc1, loc3)
     
     def test_lon_diff(self):
-        loc1 = location.Location("SLO", 35.3, -120.7)
-        loc4 = location.Location("SLO", 35.3, -120.8)
+        loc1 = Location("SLO", 35.3, -120.7)
+        loc4 = Location("SLO", 35.3, -120.8)
         self.assertNotEqual(loc1, loc4)
 
     def test_name_diff(self):
-        loc1 = location.Location("SLO", 35.3, -120.7)
-        loc5 = location.Location("SLOB", 35.3, -120.7)
+        loc1 = Location("SLO", 35.3, -120.7)
+        loc5 = Location("SLOB", 35.3, -120.7)
         self.assertNotEqual(loc1, loc5)
 
 if __name__ == "__main__":
